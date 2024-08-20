@@ -4,3 +4,6 @@ node_modules/
 # Dist/lib folders
 dist/
 lib/
+
+# Data folder
+data/*

@@ -10,14 +10,19 @@
   "author": "Fábio Ferreira <ffcfpten@gmail.com>",
   "license": "MIT",
   "scripts": {
+    "process:taxonomy": "yarn tsx ./scripts/cleanCategories",
     "prebuild": "rimraf dist",
-    "build": "tsc",
+    "build": "tsc -p ./tsconfig.build.json",
+    "postbuild": "cp -R ./src/definitions ./dist/definitions",
     "lint": "eslint --fix",
     "lint:diff": "eslint",
     "format": "yarn prettier -w ./src",
     "format:check": "yarn prettier -l ./src",
     "test": "jest --passWithNoTests",
     "prepare": "husky"
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
@@ -36,6 +41,7 @@
     "rimraf": "^6.0.1",
     "semantic-release": "^24.0.0",
     "ts-jest": "^29.2.3",
+    "tsx": "^4.17.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^7.18.0"
   },
