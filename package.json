@@ -1,12 +1,12 @@
 {
-  "name": "ts-package-template",
+  "name": "shopify-taxonomy-js",
   "type": "module",
-  "description": "TypeScript package template to starting shipping at light speed",
+  "description": "Shopify Taxonomy client to get taxonomy details without API access",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "repository": "git@github.com:fabiofcferreira/ts-package-template.git",
+  "repository": "git@github.com:fabiofcferreira/shopify-taxonomy-js.git",
   "author": "Fábio Ferreira <ffcfpten@gmail.com>",
   "license": "MIT",
   "scripts": {
