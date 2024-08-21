@@ -17,7 +17,7 @@ export class ShopifyTaxonomyClient {
 
   public setLanguage(newLanguage: TaxonomyLanguage) {
     this.language = newLanguage;
-    this.taxonomyTree = loadTaxonomyTree(TaxonomyLanguage.English);
+    this.taxonomyTree = loadTaxonomyTree(newLanguage);
   }
 
   public getLanguage(): TaxonomyLanguage {

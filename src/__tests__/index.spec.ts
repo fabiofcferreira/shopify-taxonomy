@@ -31,10 +31,10 @@ describe("Taxonomy client", () => {
     );
   });
 
-  it("should return in different languages after changing null when category cannot be found", () => {
+  it("should return in different languages after setting different language", () => {
     const customClient = new ShopifyTaxonomyClient(TaxonomyLanguage.Portuguese);
 
-    expect(taxonomy.getCategory("ap")).toMatchObject(
+    expect(customClient.getCategory("ap")).toMatchObject(
       expect.objectContaining({
         fullName: "Artigos para animais e animais estimação",
         id: "ap",
@@ -45,7 +45,7 @@ describe("Taxonomy client", () => {
 
     customClient.setLanguage(TaxonomyLanguage.Spanish);
 
-    expect(taxonomy.getCategory("ap")).toMatchObject(
+    expect(customClient.getCategory("ap")).toMatchObject(
       expect.objectContaining({
         fullName: "Productos para mascotas y animales",
         id: "ap",
