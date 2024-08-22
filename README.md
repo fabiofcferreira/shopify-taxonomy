@@ -1,34 +1,19 @@
-# shopify-taxonomy-js
+# shopify-taxonomy
 
-`shopify-taxonomy-js` is a simple client to get the Shopify product taxonomy name and full name (Grandparent category > Parent category > Child category), given the ID.
+`shopify-taxonomy` is a collection of simple clients to get the Shopify product taxonomy name and full name (Grandparent category > Parent category > Child category), given the ID.
 
 ## Install
 
 ```bash
-yarn add shopify-taxonomy-js
+yarn add shopify-taxonomy-es # spanish version
 ```
 
 ## Usage
 
-### English
-
 ```typescript
-import taxonomy from "shopify-taxonomy-js";
+import taxonomy from "shopify-taxonomy-es";
 
-taxonomy.getCategory("ap-2"); // Get category for animal products
-```
-
-### Non-english languages
-
-If you wish to use this in a different language other than English:
-
-```typescript
-import { ShopifyTaxonomyClient } from "shopify-taxonomy-js";
-
-const portugueseTaxonomy = new ShopifyTaxonomyClient(
-  TaxonomyLanguage.Portuguese
-);
-portugueseTaxonomy.getCategory("ap-2"); // Get category for animal products
+taxonomy.getCategory("ap-2"); // Get category for animal products in spanish
 ```
 
 ## Development
