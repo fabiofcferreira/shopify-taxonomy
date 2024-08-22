@@ -1,18 +1,29 @@
 import path from "path";
-import { readdirSync, readFileSync, writeFile, writeFileSync } from "fs";
-import { TaxonomyLanguage } from "../src/types";
+import { readdirSync, readFileSync, writeFileSync } from "fs";
 
 const PRE_PROCESSED_TAXONOMY_FILES_DIR = path.join("./data");
-const PROCESSED_TAXONOMY_FILES_DIR = path.join("./src/definitions");
 
 function getKnownFilenames() {
   try {
     const dataFolder = readdirSync(PRE_PROCESSED_TAXONOMY_FILES_DIR);
 
     return dataFolder.filter((filename) => {
-      const supportedTaxonomyLanguages = Object.values(
-        TaxonomyLanguage,
-      ) as string[];
+      const supportedTaxonomyLanguages = [
+        "da",
+        "de",
+        "en",
+        "es",
+        "fi",
+        "fr",
+        "it",
+        "ja",
+        "ko",
+        "nl",
+        "pl",
+        "pt-BR",
+        "pt-PT",
+        "zh-CN",
+      ];
 
       const baseFilename = filename.replace(".json", "");
 
@@ -39,6 +50,8 @@ function handler() {
       const fileBuffer = readFileSync(
         path.join(PRE_PROCESSED_TAXONOMY_FILES_DIR, filename),
       );
+
+      const languageCode = filename.replace(".json", "");
 
       const taxonomyTree = JSON.parse(Buffer.from(fileBuffer).toString());
 
@@ -69,7 +82,7 @@ function handler() {
       }
 
       writeFileSync(
-        path.join(PROCESSED_TAXONOMY_FILES_DIR, filename),
+        path.join("./packages", languageCode, "src", filename),
         JSON.stringify(taxonomyTree),
       );
     }

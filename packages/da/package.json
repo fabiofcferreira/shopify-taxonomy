@@ -1,0 +1,27 @@
+{
+  "name": "shopify-taxonomy-da",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Shopify Taxonomy client in Danish",
+  "main": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "repository": "git@github.com:fabiofcferreira/shopify-taxonomy-js.git",
+  "author": "Fábio Ferreira <ffcfpten@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "lint": "eslint --fix",
+    "lint:diff": "eslint",
+    "format": "yarn prettier -w ./src",
+    "format:check": "yarn prettier -l ./src",
+    "test": "jest --passWithNoTests",
+    "build": "tsc -p ./tsconfig.json",
+    "postbuild": "cp -R ./src/*.json ./dist/"
+  },
+  "dependencies": {
+    "shopify-taxonomy-core": "^1.0.1"
+  },
+  "devDependencies": {},
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

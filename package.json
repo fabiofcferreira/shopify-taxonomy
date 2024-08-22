@@ -1,27 +1,46 @@
 {
-  "name": "shopify-taxonomy-js",
+  "private": true,
+  "name": "shopify-taxonomy",
   "type": "module",
+  "version": "0.0.0",
   "description": "Shopify Taxonomy client to get taxonomy details without API access",
   "main": "dist/index.js",
   "files": [
     "dist"
   ],
-  "repository": "git@github.com:fabiofcferreira/shopify-taxonomy-js.git",
+  "repository": "git@github.com:fabiofcferreira/shopify-taxonomy.git",
   "author": "Fábio Ferreira <ffcfpten@gmail.com>",
   "license": "MIT",
+  "workspaces": [
+    "./packages/en",
+    "./packages/da",
+    "./packages/de",
+    "./packages/es",
+    "./packages/fi",
+    "./packages/fr",
+    "./packages/it",
+    "./packages/ja",
+    "./packages/ko",
+    "./packages/nl",
+    "./packages/pl",
+    "./packages/pt-BR",
+    "./packages/pt-PT",
+    "./packages/zh-CN"
+  ],
   "scripts": {
     "process:taxonomy": "yarn tsx ./scripts/cleanCategories",
     "prebuild": "rimraf dist",
-    "build": "tsc -p ./tsconfig.build.json",
-    "postbuild": "cp -R ./src/definitions ./dist/definitions",
+    "build": "yarn wsrun build",
+    "publish": "yarn wsrun publish",
     "lint": "eslint --fix",
     "lint:diff": "eslint",
-    "format": "yarn prettier -w ./src",
-    "format:check": "yarn prettier -l ./src",
+    "format": "yarn prettier -w ./packages",
+    "format:check": "yarn prettier -l ./packages",
     "test": "jest --passWithNoTests",
     "prepare": "husky"
   },
   "dependencies": {
+    "shopify-taxonomy-core": "^1.0.1",
     "zod": "^3.23.8"
   },
   "devDependencies": {
@@ -39,11 +58,11 @@
     "lint-staged": "^15.2.7",
     "prettier": "^3.3.3",
     "rimraf": "^6.0.1",
-    "semantic-release": "^24.0.0",
     "ts-jest": "^29.2.3",
     "tsx": "^4.17.0",
     "typescript": "^5.5.4",
-    "typescript-eslint": "^7.18.0"
+    "typescript-eslint": "^7.18.0",
+    "wsrun": "^5.2.4"
   },
   "lint-staged": {
     "*.{js,ts}": [

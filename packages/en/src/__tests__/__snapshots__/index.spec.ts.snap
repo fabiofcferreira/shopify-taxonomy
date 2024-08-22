@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`English taxonomy client should return English taxonomy categories 1`] = `
+{
+  "fullName": "Animals & Pet Supplies > Pet Supplies > Bird Supplies > Bird Cage Accessories",
+  "id": "ap-2-1-1",
+  "name": "Bird Cage Accessories",
+  "parent_id": "ap-2-1",
+}
+`;
+
+exports[`English taxonomy client should return English taxonomy categories 2`] = `
+{
+  "fullName": "Health & Beauty > Health Care > Bed Pans",
+  "id": "hb-1-2",
+  "name": "Bed Pans",
+  "parent_id": "hb-1",
+}
+`;
+
+exports[`English taxonomy client should throw if category is invalid 1`] = `"Category ID 'hb---11' is not valid."`;
+
+exports[`English taxonomy client should throw if category is invalid 2`] = `"Category ID 'h' is not valid."`;
+
+exports[`English taxonomy client should throw if category is invalid 3`] = `"Category ID 'a4' is not valid."`;

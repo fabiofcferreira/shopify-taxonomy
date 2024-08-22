@@ -1,7 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Taxonomy client should throw error if category id is not valid 1`] = `"Category ID 'p' is not valid."`;
-
-exports[`Taxonomy client should throw error if category id is not valid 2`] = `"Category ID 'completely*mal_formed-id' is not valid."`;
-
-exports[`Taxonomy client should throw error if category id is not valid 3`] = `"Category ID '?***efewfewf-wdfkjhgdjhgdhjg2h' is not valid."`;
