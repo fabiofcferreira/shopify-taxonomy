@@ -25,6 +25,9 @@ commands:
       - checkout
       - node/install-packages:
           pkg-manager: yarn
+      - run:
+          name: NPM Auth
+          command: echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
 
   build-package:
     steps:
