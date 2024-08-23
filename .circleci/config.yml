@@ -32,12 +32,12 @@ commands:
           name: Build
           command: yarn build
 
-  create-package-release:
-    description: Create release
+  publish-packages:
+    description: Publish all packages
     steps:
       - run:
-          command: yarn semantic-release
-          name: Release
+          command: yarn publish
+          name: Publish all packages
 
 jobs:
   build:
@@ -54,7 +54,7 @@ jobs:
     steps:
       - setup
       - build-package
-      - create-package-release
+      - publish-packages
 
 workflows:
   branches:
