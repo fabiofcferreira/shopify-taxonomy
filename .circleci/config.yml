@@ -36,7 +36,7 @@ commands:
     description: Publish all packages
     steps:
       - run:
-          command: yarn publish
+          command: yarn packages:publish
           name: Publish all packages
 
 jobs:
