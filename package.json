@@ -23,14 +23,16 @@
     "./packages/ko",
     "./packages/nl",
     "./packages/pl",
-    "./packages/pt-BR",
     "./packages/pt-PT",
+    "./packages/pt-BR",
     "./packages/zh-CN"
   ],
   "scripts": {
-    "process:taxonomy": "yarn tsx ./scripts/cleanCategories",
+    "scripts:minify:taxonomy": "yarn tsx ./scripts/cleanCategories",
+    "scripts:update:readmes": "yarn tsx ./scripts/updateReadmes",
     "prebuild": "rimraf dist",
     "build": "yarn wsrun build",
+    "prepare:publish": "yarn wsrun version --no-git-tag-version --no-commit-hooks --new-version",
     "publish": "yarn wsrun publish",
     "lint": "eslint --fix",
     "lint:diff": "eslint",
@@ -40,7 +42,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "shopify-taxonomy-core": "^1.0.1",
+    "shopify-taxonomy-core": "^1.1.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {

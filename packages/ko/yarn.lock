@@ -2,10 +2,10 @@
 # yarn lockfile v1
 
 
-shopify-taxonomy-core@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/shopify-taxonomy-core/-/shopify-taxonomy-core-1.0.1.tgz#1adf3500263e686a5bd8565b5cca7cf42dce1c89"
-  integrity sha512-IgiWXmFbN7ZnOubrSHBmqi/6X/YTshxcThw7/wJwLbi+QW6aQHSIQ3+HzqyYytQlUMTTzf6iyURpGPpRIByCXA==
+shopify-taxonomy-core@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/shopify-taxonomy-core/-/shopify-taxonomy-core-1.1.0.tgz#e6255ddcbe8149b68054e742a40e1f360d74b550"
+  integrity sha512-80aXJmbN3DGxtXRM1OkNHiO2DSuOjKQ76EXKyxrT1Yjv50MHXy/qLkVzQAzhSZ4jV5kMavXSnCFYxhhma+rcWQ==
   dependencies:
     zod "^3.23.8"
 
