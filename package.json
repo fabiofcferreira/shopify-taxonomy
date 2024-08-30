@@ -1,7 +1,6 @@
 {
   "private": true,
   "name": "shopify-taxonomy",
-  "type": "module",
   "version": "0.0.0",
   "description": "Shopify Taxonomy client to get taxonomy details without API access",
   "main": "dist/index.js",
@@ -42,7 +41,7 @@
     "prepare": "husky"
   },
   "dependencies": {
-    "shopify-taxonomy-core": "^1.1.0",
+    "shopify-taxonomy-core": "^1.1.1",
     "zod": "^3.23.8"
   },
   "devDependencies": {
