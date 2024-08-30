@@ -29,9 +29,9 @@
   "scripts": {
     "scripts:minify:taxonomy": "yarn tsx ./scripts/cleanCategories",
     "scripts:update:readmes": "yarn tsx ./scripts/updateReadmes",
+    "scripts:update:versions": "yarn wsrun version --no-git-tag-version --no-commit-hooks --new-version",
     "prebuild": "rimraf dist",
     "build": "yarn wsrun build",
-    "packages:prepublish": "yarn wsrun version --no-git-tag-version --no-commit-hooks --new-version",
     "packages:publish": "yarn wsrun publish",
     "lint": "eslint --fix",
     "lint:diff": "eslint",

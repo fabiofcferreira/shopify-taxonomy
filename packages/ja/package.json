@@ -1,6 +1,6 @@
 {
   "name": "shopify-taxonomy-ja",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Shopify Taxonomy client in Japanese",
   "main": "dist/index.js",
   "files": [
